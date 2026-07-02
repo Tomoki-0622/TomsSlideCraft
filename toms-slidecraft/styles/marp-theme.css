@@ -1,0 +1,97 @@
+/* @theme toms-slidecraft */
+
+section {
+  font-family: 'Yu Gothic', 'YuGothic', 'Hiragino Sans', sans-serif;
+  background: #ffffff;
+  color: #333333;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  color: #54C3E1;
+  font-family: 'Calibri', 'Gill Sans', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  color: #54C3E1;
+}
+
+strong {
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5em 0;
+}
+
+th {
+  background: #54C3E1;
+  color: #ffffff;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:nth-child(even) td {
+  background: #F5F5F5;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+.highlight-box {
+  padding: 12px 16px;
+  background: #e8f7fc;
+  border-left: 4px solid #54C3E1;
+  margin: 0.5em 0;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Page number (header right) */
+section::before {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Suntory logo footer right */
+section::after {
+  content: '';
+  background: url('/suntory-logo.png') no-repeat center / contain;
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  width: 80px;
+  height: 24px;
+}
